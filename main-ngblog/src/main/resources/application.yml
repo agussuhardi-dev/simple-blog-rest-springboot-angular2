@@ -1,0 +1,11 @@
+server:
+  port: 10000
+zuul:
+  routes:
+    api:
+      path: /api/**
+      strip-prefix: false
+      url: http://192.168.43.19:8080
+    angular2:
+      path: /**
+      url: http://192.168.43.19:4200
